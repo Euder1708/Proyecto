@@ -1,0 +1,319 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; /* Fondo suave de color gris claro */
+    color: #333;
+    line-height: 1.6;
+    padding-top: 60px; /* Espacio para la barra de navegación fija */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Menú de navegación */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+#nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-list li {
+    display: inline-block;
+}
+
+#nav-list a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+#nav-list a:hover {
+    background-color: #575757;
+}
+
+/* Estilo del botón de menú (hamburguesa) */
+.menu-toggle {
+    display: none;
+}
+
+/* Sección de Introducción */
+header {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cta-btn img {
+    width: 80px; /* Reducción del tamaño de la imagen del CTA */
+    margin-right: 10px;
+}
+
+.cta-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Secciones Generales */
+.section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Sección de Habilidades */
+#habilidades ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#habilidades li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#habilidades li strong {
+    color: #009688;
+}
+
+/* Sección de Proyectos */
+.carousel-container {
+    position: relative;
+    width: 60%; /* Hace que el carrusel ocupe un 80% del ancho de la página */
+    margin: 20px auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: opacity 1s ease;
+}
+
+.carousel-slide img {
+    width: 60%; /* Ajusta el tamaño al 80% del contenedor */
+    margin: 0 auto; /* Centra la imagen */
+    border-radius: 8px;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(4, 184, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #028781;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Añadido un sombra más suave */
+    max-width: 600px; /* Limitar el ancho máximo del formulario */
+    margin: 30px auto; /* Centrado el formulario y con más espacio arriba */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0; /* Más espacio entre los campos */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Añadido sombra suave */
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #009688; /* Cambio de color al enfocar el campo */
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.3); /* Agregar sombra en enfoque */
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    background-color: #009688;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00796b; /* Efecto hover más suave */
+}
+
+/* Agregar un mensaje de agradecimiento o error después del formulario */
+form .message {
+    font-size: 1rem;
+    color: #009688;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo de la sección de contacto */
+#contacto {
+    background-color: #f7f7f7; /* Fondo suave para la sección */
+    padding: 50px 20px;
+}
+
+#contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo para el formulario dentro de la sección */
+#contacto form {
+    background-color: #037c60;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #333;
+    color: rgb(61, 161, 255);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ff5722;
+}
+
+footer a:hover {
+    color: #e64a19;
+}
+
+/* Redes sociales */
+footer .social a {
+    margin: 0 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 15px;
+    }
+
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-list li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .menu-toggle:focus {
+        outline: none;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+    }
+
+    .carousel-slide img {
+        width: 60%; /* Ajuste de las imágenes en pantallas más pequeñas */
+    }
+
+    header .imagen-CTA {
+        width: 60px; /* Reducción adicional de la imagen CTA en dispositivos pequeños */
+    }
+}
